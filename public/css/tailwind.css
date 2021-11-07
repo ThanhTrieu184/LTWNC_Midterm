@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.message {
+  @apply my-4 mx-6 text-right
+}
+
+.message-left {
+  @apply my-4 mx-6 text-left
+}

@@ -1,0 +1,36 @@
+
+<div class="relative max-w-xl my-20 mx-auto">
+	<div class="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500
+		shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-xl"></div>
+	<div class="relative shadow-lg bg-white rounded-xl">
+		<header class="join-header text-center p-5 text-3xl text-emerald-800">
+			<h1><i class="fab fa-rocketchat"></i> JOIN ROOM</h1>
+		</header>
+		<div class="p-8 text-emerald-800 rounded-b-xl">
+			<form action="/chat">
+				<div class="mb-5">
+					<input
+						class="text-lg p-2 w-full h-10 rounded-lg focus:outline-none border
+						focus:border-emerald-400"
+						type="hidden"
+						name="user_id"
+						id="user_id"
+						value={{ user_id }}
+						/>
+				</div>
+				<div class="mb-5">
+					<label for="room_id" class="block mb-1">Choose a room</label>
+					<select name="room_id" id="room_id" class="text-lg p-2 w-full h-10
+						rounded-lg focus:outline-none border focus:border-emerald-400
+						appearance-none cursor-pointer">
+						{{#each rooms }}
+						<option value={{this._id}}>{{ this.roomName }}</option>
+						{{/each }}
+					</select>
+				</div>
+				<button type="submit" class="mt-5 w-full bg-emerald-800 text-white py-2
+					rounded-lg">Join Chat</button>
+			</form>
+		</div>
+	</div>
+</div>
