@@ -85,7 +85,7 @@ io.on("connection", (socket) => {
     MessageController.createMessage(msg, user_id, room_id);
     io.to(room_id).emit("message", [
       formatMessage(
-        user.user_id,
+        user._id,
         user.username,
         msg,
         moment().format("DD/MM/YYYY:h:mm:ss a")
